@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <title>New Game | The Dream</title>
+</head>
+<body onload="rollPlayerStats()">
+    <div class="jumbotron bg-primary">
+        <h1>Welcome to the Dream</h1>
+        <h2>Version 0.0.1</h2>
+    </div>
+
+    <!-- true content area is to keep a consistent "resolution" across screens --> 
+    <div class="true-content-area">
+        <div id="dr-content-area">
+            <!-- name of save --> 
+            <label>Save Name</label>
+            <input type="text" class="form-control" name="saveName" id="save-name">
+
+            <!-- name of player --> 
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="playerName" id="name" required>
+
+            <!-- height of player --> 
+            <label for="height">Height (cm)</label>
+            <div class="input-group mb-3">
+                <input type="number" class="form-control" name="playerHeight" id="height" value="170" min="150" max="220" onchange="liveConvertHeight()" >
+                <div class="input-group-append">
+                    <span class="input-group-text" id="imperial-addon-ht">Imperial: 5'6"</span>
+                </div>
+            </div>
+
+            <!-- weight of player -->
+            <label for="weight">Weight (kg)</label>
+            <div class="input-group mb-3">
+                <input type="number" class="form-control" name="playerHeight" id="weight" value="80" min="50" max="136" step="0.5" onchange="liveConvertWeight()" >
+                <div class="input-group-append">
+                    <span class="input-group-text" id="imperial-addon-wt">Imperial: 176lbs</span>
+                </div>
+            </div>
+
+            <label for="possession">Ability to Possess the Puck</label>
+            <input type="number" class="form-control" name="playerPoss" id="possession" disabled>
+
+            <label for="shooting">Ability to Shoot the Puck</label>
+            <input type="number" class="form-control" name="playerShooting" id="shooting" disabled>
+
+            <label for="passing">Ability to Pass the Puck</label>
+            <input type="number" class="form-control" name="playerPassing" id="passing" disabled>
+
+            <label for="passTend">Tendency to Pass the Puck</label>
+            <input type="number" class="form-control" name="playerpassTend" id="passTend" disabled>
+
+            <label for="saves">Ability to make Saves</label>
+            <input type="number" class="form-control" name="playerSave" id="saving" disabled>
+
+            <div class="form-group">
+                <label for="team">Local Youth Teams</label>
+                <select class="form-control" id="team">
+                    <option value="Toronto">Toronto</option>
+                    <option value="Montreal">Montreal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="position">Position</label>
+                <select class="form-control" id="position">
+                    <option value="C" selected>Centre</option>
+                    <option value="LW">Left Wing</option>
+                    <option value="RW">Right Wing</option>
+                    <option value="LD">Left Defense</option>
+                    <option value="RD">Right Defense</option>
+                    <option value="G">Goalie</option>
+                </select>
+            </div>
+
+            <br>
+            <div class="input-group mb-3" id="form-buttons">
+                <button class="btn btn-success" onclick="createNewGame()"> Create New Game </button>
+                <button class="btn btn-outline-primary" onclick="rollPlayerStats()"> Reroll Stats </button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+    <script src="../utils/loadHeaders.js"></script>
+    <script src="../controllers/mainCreateGame_controller.js"></script>
+    <script src="../utils/util.js"></script>
+</html>

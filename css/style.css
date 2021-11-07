@@ -1,0 +1,15 @@
+.true-content-area{
+    width: 60%;
+    margin: 0 0 0 15%; 
+}
+
+.m-cursor-hover{
+    cursor: pointer;
+}
+
+
+
+/* input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+} */

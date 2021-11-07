@@ -1,0 +1,27 @@
+{ "scheduleEvents": [
+    {
+        "name": "Agent-Welcome",
+        "message": "This is an event",
+        "date": "Thu Sep 02 1948 12:00:50 GMT-0400 (Eastern Daylight Time)",
+        "team": "Toronto"
+    },
+    {
+        "name": "Agent-Sup",
+        "message": "This is an event again",
+        "date": "Thu Sep 02 1948 12:00:50 GMT-0400 (Eastern Daylight Time)",
+        "team": "Montreal"
+    },
+    {
+        "name": "Agent-Welcome",
+        "message": "This is an event that's a different day",
+        "date": "Wed Sep 08 1948 12:00:50 GMT-0400 (Eastern Daylight Time)",
+        "team": "Montreal"
+    },
+    {
+        "name": "Agent-Welcome",
+        "message": "This is an event that's a different day",
+        "date": "Sun Sep 12 1948 12:00:50 GMT-0400 (Eastern Daylight Time)",
+        "team": "Toronto"
+    }
+ ]
+}
